@@ -10,12 +10,17 @@ const App = () => {
   // side effect in a component, you want to think about which state and/or props it should
   // sync up with, if any.
   const [swData, setSwData] = useState([]);
+  const [swFilms, setSwFilms] = useState([]);
 
   useEffect(() => {
     axios
       .get("https://swapi.dev/api/people/")
       .then((response) => setSwData(response.data))
       .catch((error) => console.log(error));
+    axios
+      .get("https://swapi.dev/api/films/")
+      .then((res) => setSwFilms(res.data[0].results))
+      .catch((err) => console.log(err));
   }, []);
   return (
     <div className="App">
@@ -24,7 +29,7 @@ const App = () => {
         <p>Loading...</p>
       ) : (
         swData.map((character) => (
-          <Karakter data={character} key={character.name} />
+          <Karakter data={character} key={character.name} swFilms={swFilms} />
         ))
       )}
     </div>

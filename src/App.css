@@ -3,6 +3,10 @@
 }
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
 }
 .Header {
   color: #443e3e;
@@ -10,17 +14,32 @@
 }
 /* write your parent styles in here for your App.js */
 .character-close {
-  max-height: 80px;
+  width: 40%;
+  max-height: 84px;
   background-color: rgba(250, 249, 249, 0.5);
   overflow: hidden;
   color: black;
 }
 .character-open {
+  width: 40%;
   background-color: rgba(250, 249, 249, 0.5);
-  padding: 10px;
-  border: 2px solid grey;
+  padding: 0 0 10px 0;
 }
 .character-name {
   border: 2px solid grey;
   padding: 10px;
+  width: 100%;
+}
+.character-info {
+  text-align: left;
+  padding: 0 20px 0 20px;
+}
+.character-info .character-close {
+  width: 100%;
+}
+.character-info .character-open {
+  width: 100%;
+}
+.character-info .character-open .character-info {
+  padding: 1rem;
 }
