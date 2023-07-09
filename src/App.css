@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 .App {
   text-align: center;
 }
@@ -6,3 +9,18 @@
   text-shadow: 1px 1px 5px #fff;
 }
 /* write your parent styles in here for your App.js */
+.character-close {
+  max-height: 80px;
+  background-color: rgba(250, 249, 249, 0.5);
+  overflow: hidden;
+  color: black;
+}
+.character-open {
+  background-color: rgba(250, 249, 249, 0.5);
+  padding: 10px;
+  border: 2px solid grey;
+}
+.character-name {
+  border: 2px solid grey;
+  padding: 10px;
+}
